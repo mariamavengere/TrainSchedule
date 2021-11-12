@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="heading" style="margin:auto">Welcome to the Gautrain Schedule</div>
+    <div>
+        <button class="btn btn-primary loginbtn">
+            <a routerLink="/login">Admin Login</a> 
+        </button>
+    </div>
+ </nav>
+<div class="container">
+  <div class="card shadow-sm bg-white rounded" style="width:100%">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th class="th-sm">Train reporting number
+    
+            </th>
+            <th class="th-sm">Destination
+    
+            </th>
+            <th class="th-sm">Scheduled Departure Time
+    
+            </th>
+            <th class="th-sm">Estimated Departure Time
+    
+            </th>
+            <th class="th-sm">Actual Departure Time
+    
+            </th>
+            <th class="th-sm"> Status
+    
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let viewSchedule of viewWeb">
+            <td>{{viewSchedule.reportingNumber}}</td>
+            <td>{{viewSchedule.city}}</td>
+            <td>{{viewSchedule.scheduleddprtTime}}</td>
+            <td>{{viewSchedule.estimateddprtTime}}</td>
+            <td>{{viewSchedule.actualdeprtTime}}</td>
+            <td>
+               Delayed
+           </td>
+        </tr>
+       
+        </tbody>
+        <tfoot>
+        <tr>
+          
+        </tr>
+        </tfoot>
+    </table>
+  </div>
+</div>
+

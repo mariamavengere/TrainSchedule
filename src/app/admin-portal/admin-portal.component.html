@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="heading" style="margin:auto">Admin Portal
+    <span  class="admintag">Set train schedules</span>
+    </div>
+    <div>
+        <button class="btn btn-primary loginbtn">
+            <a routerLink="/login">Sign out</a> 
+        </button>
+    </div>
+ </nav>
+<div class="container">
+  <div class="card shadow-sm bg-white rounded" style="width:100%">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th class="th-sm">Train reporting number
+    
+            </th>
+            <th class="th-sm">Destination
+    
+            </th>
+            <th class="th-sm">Scheduled Departure Time
+    
+            </th>
+            <th class="th-sm">Estimated Departure Time
+    
+            </th>
+            <th class="th-sm">Actual Departure Time
+    
+            </th>
+            <th class="th-sm"> Status
+    
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let deptr of departureTimes">
+            <td>{{deptr.reportingNumber}}</td>
+            <td>{{deptr.city}}</td>
+            <td><input type="time"></td>
+            <td><input type="time"></td>
+            <td><input type="time"></td>
+            <td *ngFor="let status of trainStatus">
+              <select class="form-select form-select-sm">
+                <option selected>{{status.onTime}}</option>
+                <option value="1">{{status.departed}}</option>
+                <option value="2">{{status.cancelled}}</option>
+                <option value="3">{{status.delayed}}</option>
+              </select>
+           </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         <td>
+            <div class="saveChanges">
+            <button class="btn btn-primary">Save changes</button>
+            </div>
+        </td>
+        </tr>
+        </tfoot>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+/*import { Injectable, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR } from '@angular/core';
+//import { AdminPortalComponent } from '../admin-portal/admin-portal.component';
+import { Router} from '@angular/router';
+
+@Injectable()
+
+export class {
+   
+   // success!: boolean;
+    constructor(
+
+    //    private router: Router
+    ){
+
+    }
+
+/*getUserDetails(adminName: string, adminPassword: string){
+
+    if( adminName === 'admin' && adminPassword === 'pass'){
+        isLoggedIn(): boolean{
+            return true;
+        }
+        
+            this.router.navigate(['']);
+            
+        }
+    }
+  }
+}*/

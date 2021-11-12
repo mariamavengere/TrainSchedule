@@ -1,0 +1,64 @@
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="heading" style="margin:auto">Administrator login</div>
+     </nav>
+     <div class="container">
+         <!-- First Session-->
+         <div class ="row">
+             <div class ="col-sm">
+                 <div class ="card shadow-sm bg-white rounded">
+                     <div class="card-title headingTwo"> 
+                        Please login...
+                     </div>
+                     <div class="card-body"> 
+                         <form [formGroup]="adminLogin" (submit)="login()">
+                             <div class="mb-3 form-group">
+                                 <label class="time-label-start">Username</label>
+                                 <input 
+                                    type="text" 
+                                    formControlName="username"
+                                    class="form-control login-input"
+                                    id="username">
+                             </div>
+                             <div 
+                             *ngIf="f.username.invalid && f.username.touched" 
+                              class="alert alert-danger error-messages">Please enter the session start time
+                           </div>
+                             <div class="mb-3 form-group">
+                                  <label class="time-label-end">Password</label>
+                                   <input 
+                                     type="text" 
+                                     class="form-control login-input"
+                                     formControlName="password"
+                                     id="password">
+                             </div>
+                             <div 
+                             *ngIf="f.password.invalid && f.password.touched" 
+                              class="alert alert-danger error-messages">Please enter the session end time
+                           </div>
+                           
+                             <div class="mb-3 form-group">
+                                 <button 
+                                 type="button" 
+                                 (click)="onReset()"
+                                 class="btn btn-secondary">Reset
+                              </button>
+                                <button 
+                                   class="btn btn-primary loginbtn" 
+                                   type="submit"
+                                   [disabled]="!adminLogin.valid"
+                                   (click)="login()">
+                                   <a routerLink="/admin">
+                                     Sign in
+                                    </a> 
+                         
+                                 </button>
+                             </div>
+                            
+                         </form>
+                         
+                     </div>
+                 </div>
+                 
+             </div>
+     
+</div>
